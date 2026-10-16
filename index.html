@@ -4,34 +4,1110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mening sahifam</title>
+    <meta name="theme-color" content="#050505">
+    <meta name="description" content="BarberBook — premium sartaroshxonalarni topish, ustalarni tanlash va oldindan bron qilish platformasi.">
 
-    <link rel="stylesheet" href="Hasan.css/index.css">
+    <title>BarberBook | Premium Barbershop</title>
+
+    <!-- ASOSIY CSS -->
+    <link rel="stylesheet" href="./Hasan.css/index.css">
+    
+    <!-- SHRIFTLAR -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <table class="xasan">
-        <tr>
-            <td>
-                <ol>
-                    <li>Lorem.</li>
-                    <li>Similique!</li>
-                    <li>Nemo.</li>
-                    <li>Necessitatibus.</li>
-                    <li>Vel.</li>
-                    <li>Tenetur!</li>
-                    <li>Aperiam?</li>
-                    <li>Sapiente.</li>
-                </ol>
-            </td>
-        </tr>
-    </table>
-    <div>
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus repudiandae nobis eveniet incidunt sunt neque cumque perspiciatis ducimus repellendus quo, veniam, dolor atque distinctio velit tempora voluptate necessitatibus excepturi soluta.</div>
-        <div>Odit iste quia ea ut reiciendis dignissimos eligendi facere totam minus? Culpa quam voluptatum nisi vero eum id, deleniti nobis optio expedita nam magni soluta repellat possimus, laudantium hic odit?</div>
-        <div>Voluptatum corrupti eaque deleniti quibusdam labore ex cum sint nesciunt ipsam laboriosam perferendis nisi odio iusto ullam similique obcaecati autem, ipsum a saepe adipisci non incidunt soluta ut minima? Consectetur!</div>
-        <div>Temporibus nisi nostrum modi quidem sequi repudiandae dolore ipsa optio at, eos deleniti, nam fugiat totam inventore magnam! Velit et deserunt hic voluptas eum at necessitatibus dolore omnis earum minima!</div>
+<!-- ==================================================
+     1. KIRISH EKRANI — LOGOTIP
+================================================== -->
+
+<div class="intro-screen" id="introScreen">
+    <div class="intro-glow"></div>
+
+    <div class="intro-content">
+<img
+    src="RASIMLAR/Firefly_RemoveBackground.png"
+    alt="BarberBook tojli premium logotipi"
+    class="intro-logo"
+    id="introLogo"
+>
+
+        <div class="intro-loading">
+            <span></span>
+        </div>
+
+        <p class="intro-caption">PREMIUM BARBERSHOP EXPERIENCE</p>
     </div>
+</div>                  
+
+
+<!-- ==================================================
+     2. SAYTNING ASOSIY QISMI
+================================================== -->
+
+<div class="app" id="mainApp">
+
+    <!-- YUQORI QISM -->
+    <header class="top-header">
+
+        <a href="#home" class="mini-brand" data-page="home">
+            <span class="brand-mark">BB</span>
+            <span class="brand-name">BARBERBOOK</span>
+        </a>
+
+        <form class="search-box" id="globalSearchForm">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+
+            <input
+                type="search"
+                id="globalSearch"
+                placeholder="Sartaroshxona yoki usta qidiruv..."
+                autocomplete="off"
+                aria-label="Sartaroshxona yoki usta qidirish"
+            >
+
+            <button type="submit" class="search-submit">
+                Qidirish
+            </button>
+        </form>
+
+        <button
+            type="button"
+            class="profile-button"
+            data-page="profile"
+            aria-label="Profilni ochish"
+        >
+            <span class="profile-icon">♟</span>
+        </button>
+
+    </header>
+
+
+    <!-- ==================================================
+         3. YUQORIDAGI ASOSIY MENYU
+    ================================================== -->
+
+    <nav class="main-navigation" aria-label="Asosiy navigatsiya">
+
+        <button type="button" class="nav-button active" data-page="home">
+            <span>⌂</span>
+            Bosh sahifa
+        </button>
+
+        <button type="button" class="nav-button" data-page="shops">
+            <span>▣</span>
+            Sartaroshxonalar
+        </button>
+
+        <button type="button" class="nav-button" data-page="top10">
+            <span>♛</span>
+            Top 10 ta sartarosh
+        </button>
+
+        <button type="button" class="nav-button" data-page="contact">
+            <span>✉</span>
+            Bog‘lanish
+        </button>
+
+    </nav>
+
+
+    <!-- ==================================================
+         4. SAHIFALAR KONTEYNERI
+         Har bir sahifa alohida section.
+         Bir vaqtda faqat tanlangan sahifa ko'rsatiladi.
+    ================================================== -->
+
+    <main class="page-container" id="pageContainer">
+
+
+        <!-- ==============================================
+             SAHIFA 1 — BOSH SAHIFA
+        =============================================== -->
+
+        <section class="page active" id="page-home" data-page-section="home">
+
+            <section class="hero">
+                <div class="hero-background"></div>
+
+                <div class="hero-content">
+                    <span class="eyebrow">BARBERBOOK PREMIUM</span>
+
+                    <h1>
+                        Biz bilan tez
+                        <span>va oson</span>
+                    </h1>
+
+                    <p>
+                        O‘zingizga mos sartaroshni toping.
+                        Ustalarni taqqoslang va vaqtingizni oldindan band qiling.
+                    </p>
+
+                    <div class="hero-actions">
+                        <button class="gold-button" type="button" data-page="shops">
+                            Sartaroshxonalarni ko‘rish
+                            <span>↗</span>
+                        </button>
+
+                        <button class="outline-button" type="button" data-page="top10">
+                            Top ustalar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="hero-badge">
+                    <span class="badge-crown">♛</span>
+                    <span>PREMIUM<br>QUALITY</span>
+                </div>
+            </section>
+
+
+            <!-- STATISTIKA -->
+            <section class="statistics" aria-label="Loyiha statistikasi">
+
+                <article class="stat-card">
+                    <span class="stat-icon">♟</span>
+                    <strong class="stat-number">17 480</strong>
+                    <span class="stat-label">Foydalanuvchilar</span>
+                </article>
+
+                <article class="stat-card">
+                    <span class="stat-icon">▣</span>
+                    <strong class="stat-number">400</strong>
+                    <span class="stat-label">Sartaroshxonalar</span>
+                </article>
+
+                <article class="stat-card">
+                    <span class="stat-icon">↗</span>
+                    <strong class="stat-number">Top</strong>
+                    <span class="stat-label">Eng yaxshi ustalar</span>
+                </article>
+
+                <article class="stat-card">
+                    <span class="stat-icon">◇</span>
+                    <strong class="stat-number">Premium</strong>
+                    <span class="stat-label">Sifatli xizmatlar</span>
+                </article>
+
+            </section>
+
+
+            <!-- BOSH SAHIFADAGI TOP KARTALAR -->
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">ENG YAXSHILAR</span>
+                    <h2>Eng zo‘r sartaroshxonalar</h2>
+                </div>
+
+                <button type="button" class="text-button" data-page="top10">
+                    Barchasini ko‘rish →
+                </button>
+            </div>
+
+            <div class="shop-grid" id="homeShopGrid"></div>
+
+
+            <!-- BOSH SAHIFADAN XARITAGA -->
+            <section class="location-promo">
+                <div>
+                    <span class="eyebrow">SIZGA YAQIN</span>
+                    <h2>Yaqin atrofdagi sartaroshxonalarni toping</h2>
+                    <p>Joylashuv bo‘yicha qulay sartaroshxonani tanlang.</p>
+                </div>
+
+                <button type="button" class="gold-button" data-page="map">
+                    Xaritani ochish ↗
+                </button>
+            </section>
+
+        </section>
+
+
+        <!-- ==============================================
+             SAHIFA 2 — SARTAROSHXONALAR
+        =============================================== -->
+
+        <section class="page" id="page-shops" data-page-section="shops" hidden>
+
+            <header class="page-header">
+                <div>
+                    <span class="eyebrow">O‘ZINGIZGA MOS JOYNI TOPING</span>
+                    <h1>Sartaroshxonalar</h1>
+                    <p>O‘zingizga mos xizmat, narx va ustani tanlang.</p>
+                </div>
+
+                <button type="button" class="gold-button" data-page="add-shop">
+                    <span>＋</span>
+                    Sartaroshxonangizni qo‘shing
+                </button>
+            </header>
+
+
+            <!-- 4 TA KATEGORIYA -->
+            <div class="category-list" id="shopCategories">
+
+                <button
+                    type="button"
+                    class="category-button active"
+                    data-category="top"
+                >
+                    <span class="category-icon">♛</span>
+                    <span>
+                        <strong>Top sartaroshxonalar</strong>
+                        <small>Eng yuqori reyting</small>
+                    </span>
+                </button>
+
+                <button
+                    type="button"
+                    class="category-button"
+                    data-category="middle"
+                >
+                    <span class="category-icon">☆</span>
+                    <span>
+                        <strong>O‘rta darajadagi</strong>
+                        <small>Sifat va narx muvozanati</small>
+                    </span>
+                </button>
+
+                <button
+                    type="button"
+                    class="category-button"
+                    data-category="cheap"
+                >
+                    <span class="category-icon">◉</span>
+                    <span>
+                        <strong>Arzon sartaroshxonalar</strong>
+                        <small>Hamyonbop xizmatlar</small>
+                    </span>
+                </button>
+
+                <button
+                    type="button"
+                    class="category-button"
+                    data-category="extra"
+                >
+                    <span class="category-icon">✦</span>
+                    <span>
+                        <strong>Qo‘shimcha imkoniyatli</strong>
+                        <small>Maxsus xizmatlar</small>
+                    </span>
+                </button>
+
+            </div>
+
+
+            <!-- KATEGORIYA TANLOVI -->
+            <div class="category-heading">
+                <div>
+                    <h2 id="categoryTitle">Top sartaroshxonalar</h2>
+                    <p id="categoryDescription">
+                        Eng yuqori baholangan sartaroshxonalar.
+                    </p>
+                </div>
+
+                <label class="sort-control">
+                    <span>Tartiblash:</span>
+                    <select id="shopSort">
+                        <option value="rating">Reyting bo‘yicha</option>
+                        <option value="price-low">Narx: arzonidan</option>
+                        <option value="price-high">Narx: qimmatidan</option>
+                        <option value="name">Nom bo‘yicha</option>
+                    </select>
+                </label>
+            </div>
+
+
+            <!-- BU YERDA TANLANGAN KATEGORIYA KARTALARI CHIQADI -->
+            <div class="shop-grid" id="allShopGrid"></div>
+
+
+            <!-- BO'SH NATIJA -->
+            <div class="empty-state" id="shopsEmptyState" hidden>
+                <span>⌕</span>
+                <h3>Sartaroshxona topilmadi</h3>
+                <p>Boshqa kategoriya yoki qidiruv so‘zini tanlang.</p>
+            </div>
+
+
+            <!-- YANGI SARTAROSHXONA QO'SHISH -->
+            <section class="add-shop-promo">
+                <div class="add-shop-symbol">＋</div>
+
+                <div>
+                    <h2>O‘z sartaroshxonangiz bormi?</h2>
+                    <p>
+                        BarberBook platformasiga qo‘shiling va yangi
+                        mijozlarni toping.
+                    </p>
+                </div>
+
+                <button type="button" class="gold-button" data-page="add-shop">
+                    Sartaroshxonani qo‘shish →
+                </button>
+            </section>
+
+        </section>
+
+
+        <!-- ==============================================
+             SAHIFA 3 — TOP 10
+        =============================================== -->
+
+        <section class="page" id="page-top10" data-page-section="top10" hidden>
+
+            <header class="page-header">
+                <div>
+                    <span class="eyebrow">ENG YUQORI BAHOLANGANLAR</span>
+                    <h1>Top 10 ta sartaroshxona</h1>
+                    <p>Reyting asosida saralangan sartaroshxonalar.</p>
+                </div>
+
+                <button type="button" class="gold-button" data-page="add-shop">
+                    ＋ Sartaroshxonangizni qo‘shing
+                </button>
+            </header>
+
+            <div class="top10-summary">
+                <div>
+                    <span>♛</span>
+                    <strong>TOP 10</strong>
+                    <small>Eng yaxshi sartaroshxonalar</small>
+                </div>
+
+                <div>
+                    <span>☆</span>
+                    <strong>Reyting</strong>
+                    <small>Mijozlar bahosi asosida</small>
+                </div>
+            </div>
+
+            <div class="shop-grid" id="topShopGrid"></div>
+
+            <section class="add-shop-promo">
+                <div class="add-shop-symbol">＋</div>
+
+                <div>
+                    <h2>Reytingga qo‘shilishni xohlaysizmi?</h2>
+                    <p>Sartaroshxonangiz haqidagi ma’lumotlarni yuboring.</p>
+                </div>
+
+                <button type="button" class="gold-button" data-page="add-shop">
+                    Ariza yuborish
+                </button>
+            </section>
+
+        </section>
+
+
+        <!-- ==============================================
+             SAHIFA 4 — SEVIMLILAR
+        =============================================== -->
+
+        <section class="page" id="page-favorites" data-page-section="favorites" hidden>
+
+            <header class="page-header">
+                <div>
+                    <span class="eyebrow">SIZ TANLAGANLAR</span>
+                    <h1>Sevimli sartaroshxonalar</h1>
+                    <p>Yurakcha bilan belgilagan joylaringiz shu yerda.</p>
+                </div>
+            </header>
+
+            <div class="shop-grid" id="favoritesGrid"></div>
+
+            <div class="empty-state" id="favoritesEmpty" hidden>
+                <span>♡</span>
+                <h2>Hozircha sevimlilar yo‘q</h2>
+                <p>Yoqtirgan sartaroshxonangizdagi yurakchani bosing.</p>
+
+                <button type="button" class="gold-button" data-page="shops">
+                    Sartaroshxonalarni ko‘rish
+                </button>
+            </div>
+
+        </section>
+
+
+        <!-- ==============================================
+             SAHIFA 5 — BRONLARIM
+        =============================================== -->
+
+        <section class="page" id="page-bookings" data-page-section="bookings" hidden>
+
+            <header class="page-header">
+                <div>
+                    <span class="eyebrow">SIZNING UCHRASHUVLARINGIZ</span>
+                    <h1>Mening bronlarim</h1>
+                    <p>Bron qilingan vaqtlar va buyurtmalar holati.</p>
+                </div>
+
+                <button type="button" class="outline-button" data-page="shops">
+                    Yangi bron qilish
+                </button>
+            </header>
+
+            <div class="booking-filters">
+                <button type="button" class="booking-filter active" data-booking-filter="all">
+                    Barchasi
+                </button>
+
+                <button type="button" class="booking-filter" data-booking-filter="pending">
+                    Kutilmoqda
+                </button>
+
+                <button type="button" class="booking-filter" data-booking-filter="confirmed">
+                    Tasdiqlangan
+                </button>
+
+                <button type="button" class="booking-filter" data-booking-filter="cancelled">
+                    Bekor qilingan
+                </button>
+            </div>
+
+            <div class="booking-list" id="bookingsList"></div>
+
+            <div class="empty-state" id="bookingsEmpty" hidden>
+                <span>♢</span>
+                <h2>Hozircha bronlaringiz yo‘q</h2>
+                <p>Sartaroshxonani tanlab, o‘zingizga qulay vaqtni band qiling.</p>
+
+                <button type="button" class="gold-button" data-page="shops">
+                    Sartaroshxonani tanlash
+                </button>
+            </div>
+
+        </section>
+
+
+        <!-- ==============================================
+             SAHIFA 6 — XARITA
+        =============================================== -->
+
+        <section class="page" id="page-map" data-page-section="map" hidden>
+
+            <header class="page-header">
+                <div>
+                    <span class="eyebrow">SIZGA ENG YAQIN</span>
+                    <h1>Sartaroshxonalar xaritasi</h1>
+                    <p>Joylashuvingizga yaqin 5 ta sartaroshxonani toping.</p>
+                </div>
+
+                <button type="button" class="gold-button" id="findNearby">
+                    ⌖ Joylashuvimni aniqlash
+                </button>
+            </header>
+
+            <div class="map-notice" id="mapNotice">
+                Yaqin sartaroshxonalarni topish uchun joylashuvga
+                ruxsat berishingiz mumkin.
+            </div>
+
+            <!-- Xarita xizmati keyin ulanadi -->
+            <div class="map-container" id="mapContainer">
+                <div class="map-placeholder">
+                    <span class="map-placeholder-icon">⌖</span>
+                    <h2>Xarita</h2>
+                    <p>Joylashuvingiz aniqlangach, yaqin sartaroshxonalar ko‘rsatiladi.</p>
+                </div>
+            </div>
+
+            <div class="section-heading">
+                <h2>Sizga yaqin 5 ta sartaroshxona</h2>
+            </div>
+
+            <div class="nearby-list" id="nearbyShops"></div>
+
+        </section>
+
+
+        <!-- ==============================================
+             SAHIFA 7 — PROFIL
+        =============================================== -->
+
+        <section class="page" id="page-profile" data-page-section="profile" hidden>
+
+            <header class="page-header">
+                <div>
+                    <span class="eyebrow">SHAXSIY KABINET</span>
+                    <h1>Mening profilim</h1>
+                    <p>Shaxsiy ma’lumotlaringiz va sozlamalaringiz.</p>
+                </div>
+            </header>
+
+            <div class="profile-layout">
+
+                <aside class="profile-sidebar">
+                    <div class="profile-avatar">♟</div>
+                    <h2 id="profileDisplayName">Yangi foydalanuvchi</h2>
+                    <p id="profileDisplayEmail">Email kiritilmagan</p>
+
+                    <button type="button" class="profile-menu-button active" data-profile-tab="details">
+                        Shaxsiy ma’lumotlar
+                    </button>
+
+                    <button type="button" class="profile-menu-button" data-page="bookings">
+                        Mening bronlarim
+                    </button>
+
+                    <button type="button" class="profile-menu-button" data-page="favorites">
+                        Sevimlilarim
+                    </button>
+
+                    <button type="button" class="profile-menu-button" data-profile-tab="settings">
+                        Sozlamalar
+                    </button>
+                </aside>
+
+
+                <div class="profile-content">
+
+                    <section class="profile-tab active" id="profileTabDetails">
+                        <h2>Shaxsiy ma’lumotlar</h2>
+
+                        <form id="profileForm" class="form-grid">
+
+                            <label>
+                                Ism
+                                <input
+                                    type="text"
+                                    id="profileName"
+                                    name="name"
+                                    placeholder="Ismingiz"
+                                >
+                            </label>
+
+                            <label>
+                                Familiya
+                                <input
+                                    type="text"
+                                    id="profileSurname"
+                                    name="surname"
+                                    placeholder="Familiyangiz"
+                                >
+                            </label>
+
+                            <label>
+                                Telefon raqam
+                                <input
+                                    type="tel"
+                                    id="profilePhone"
+                                    name="phone"
+                                    placeholder="+998"
+                                >
+                            </label>
+
+                            <label>
+                                Elektron pochta
+                                <input
+                                    type="email"
+                                    id="profileEmail"
+                                    name="email"
+                                    placeholder="email@example.com"
+                                >
+                            </label>
+
+                            <label>
+                                Til
+                                <select id="profileLanguage" name="language">
+                                    <option value="uz">O‘zbekcha</option>
+                                    <option value="ru">Русский</option>
+                                    <option value="en">English</option>
+                                </select>
+                            </label>
+
+                            <div class="form-actions">
+                                <button type="submit" class="gold-button">
+                                    Ma’lumotlarni saqlash
+                                </button>
+                            </div>
+
+                        </form>
+                    </section>
+
+
+                    <section class="profile-tab" id="profileTabSettings" hidden>
+                        <h2>Sozlamalar</h2>
+
+                        <div class="settings-row">
+                            <div>
+                                <strong>Xabarlar</strong>
+                                <p>Bron holati haqidagi bildirishnomalar.</p>
+                            </div>
+                            <input type="checkbox" id="notificationSetting" checked>
+                        </div>
+
+                        <div class="settings-row">
+                            <div>
+                                <strong>Til</strong>
+                                <p>Sayt tilini tanlang.</p>
+                            </div>
+                            <select id="settingsLanguage">
+                                <option value="uz">O‘zbekcha</option>
+                                <option value="ru">Русский</option>
+                                <option value="en">English</option>
+                            </select>
+                        </div>
+                    </section>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================================
+             SAHIFA 8 — BOG'LANISH
+        =============================================== -->
+
+        <section class="page" id="page-contact" data-page-section="contact" hidden>
+
+            <header class="page-header">
+                <div>
+                    <span class="eyebrow">BIZ HAQIMIZDA</span>
+                    <h1>BarberBook — siz uchun</h1>
+                    <p>Sartaroshxonani tanlash va vaqtni oldindan band qilishning qulay yo‘li.</p>
+                </div>
+            </header>
+
+            <section class="about-card">
+                <div class="about-logo">
+                    <img src="./barberbook-logo.png" alt="BarberBook logotipi">
+                </div>
+
+                <div class="about-text">
+                    <h2>Bizning maqsadimiz</h2>
+                    <p>
+                        BarberBook mijozlarga sartaroshxonalarni topish,
+                        ustalarning tajribasi va xizmatlarini ko‘rish,
+                        mijozlar fikrlarini o‘qish hamda oldindan bron
+                        qilish imkoniyatini yaratishga mo‘ljallangan.
+                    </p>
+
+                    <p>
+                        Bizning maqsadimiz — mijoz va sartaroshxona
+                        o‘rtasidagi jarayonni qulayroq qilish.
+                    </p>
+                </div>
+            </section>
+
+            <div class="contact-grid">
+
+                <article class="contact-card">
+                    <span>✉</span>
+                    <h3>Elektron pochta</h3>
+                    <p>Taklif va savollar uchun.</p>
+                    <a href="mailto:info@barberbook.uz">
+                        info@barberbook.uz
+                    </a>
+                </article>
+
+                <article class="contact-card">
+                    <span>☎</span>
+                    <h3>Telefon</h3>
+                    <p>Aloqa ma’lumotlari administrator tomonidan kiritiladi.</p>
+                </article>
+
+                <article class="contact-card">
+                    <span>⌖</span>
+                    <h3>Joylashuv</h3>
+                    <p>Sartaroshxonalarni xaritadan qidirish.</p>
+                    <button type="button" class="text-button" data-page="map">
+                        Xaritani ochish →
+                    </button>
+                </article>
+
+            </div>
+
+
+            <section class="contact-form-section">
+                <h2>Bizga xabar yuboring</h2>
+
+                <form id="contactForm">
+
+                    <label>
+                        Ismingiz
+                        <input type="text" id="contactName" required>
+                    </label>
+
+                    <label>
+                        Email
+                        <input type="email" id="contactEmail" required>
+                    </label>
+
+                    <label>
+                        Xabar
+                        <textarea id="contactMessage" rows="5" required></textarea>
+                    </label>
+
+                    <button type="submit" class="gold-button">
+                        Xabarni yuborish
+                    </button>
+
+                </form>
+            </section>
+
+        </section>
+
+
+        <!-- ==============================================
+             SAHIFA 9 — SARTAROSHXONA QO'SHISH
+        =============================================== -->
+
+        <section class="page" id="page-add-shop" data-page-section="add-shop" hidden>
+
+            <header class="page-header">
+                <div>
+                    <span class="eyebrow">BARBERBOOK HAMKORLIGI</span>
+                    <h1>Sartaroshxonangizni qo‘shing</h1>
+                    <p>Ma’lumotlarni kiriting. Ariza tekshirish uchun yuboriladi.</p>
+                </div>
+
+                <button type="button" class="outline-button" data-page="shops">
+                    ← Orqaga
+                </button>
+            </header>
+
+            <div class="application-card">
+
+                <div class="application-intro">
+                    <span class="application-icon">＋</span>
+                    <h2>Yangi sartaroshxona</h2>
+                    <p>
+                        To‘g‘ri ma’lumotlar mijozlarga sizni osonroq
+                        topishga yordam beradi.
+                    </p>
+                </div>
+
+                <form id="addShopForm" class="form-grid">
+
+                    <label>
+                        Sartaroshxona nomi
+                        <input type="text" id="newShopName" required>
+                    </label>
+
+                    <label>
+                        Egasi yoki mas’ul shaxs
+                        <input type="text" id="newShopOwner" required>
+                    </label>
+
+                    <label>
+                        Telefon raqam
+                        <input type="tel" id="newShopPhone" placeholder="+998" required>
+                    </label>
+
+                    <label>
+                        Manzil
+                        <input type="text" id="newShopAddress" required>
+                    </label>
+
+                    <label>
+                        Shahar
+                        <select id="newShopCity" required>
+                            <option value="">Shaharni tanlang</option>
+                            <option value="Samarqand">Samarqand</option>
+                            <option value="Toshkent">Toshkent</option>
+                            <option value="Buxoro">Buxoro</option>
+                            <option value="Farg‘ona">Farg‘ona</option>
+                            <option value="Andijon">Andijon</option>
+                            <option value="Boshqa">Boshqa</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Kategoriya
+                        <select id="newShopCategory" required>
+                            <option value="top">Top sartaroshxona</option>
+                            <option value="middle">O‘rta darajadagi</option>
+                            <option value="cheap">Arzon</option>
+                            <option value="extra">Qo‘shimcha imkoniyatli</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Xizmatning boshlang‘ich narxi (so‘m)
+                        <input type="number" id="newShopPrice" min="0" required>
+                    </label>
+
+                    <label>
+                        Ish vaqti
+                        <input type="text" id="newShopHours" placeholder="09:00–21:00">
+                    </label>
+
+                    <label class="full-width">
+                        Sartaroshxona haqida
+                        <textarea id="newShopDescription" rows="4"></textarea>
+                    </label>
+
+                    <label class="full-width">
+                        Sartaroshxona rasmi
+                        <input type="url" id="newShopImage" placeholder="Rasm URL manzili">
+                    </label>
+
+                    <div class="form-actions full-width">
+                        <button type="submit" class="gold-button">
+                            Arizani yuborish →
+                        </button>
+                    </div>
+
+                </form>
+
+                <p class="form-note">
+                    Eslatma: haqiqiy ro‘yxatdan o‘tkazish uchun ariza
+                    backend orqali tekshirilishi kerak.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================================
+             SAHIFA 10 — SARTAROSHXONA XODIMLARI
+        =============================================== -->
+
+        <section class="page" id="page-workers" data-page-section="workers" hidden>
+
+            <header class="page-header">
+                <div>
+                    <span class="eyebrow">JAMOA BILAN TANISHING</span>
+                    <h1 id="workersHeading">Sartaroshxona xodimlari</h1>
+                    <p>O‘zingizga mos ustani tanlang.</p>
+                </div>
+
+                <button type="button" class="outline-button" data-page="shops">
+                    ← Sartaroshxonalarga qaytish
+                </button>
+            </header>
+
+            <div class="selected-shop-info" id="selectedShopInfo"></div>
+
+            <div class="worker-grid" id="workersGrid"></div>
+
+            <div class="empty-state" id="workersEmpty" hidden>
+                <span>♟</span>
+                <h2>Xodimlar haqida ma’lumot yo‘q</h2>
+                <p>Bu sartaroshxonaning xodimlari hali qo‘shilmagan.</p>
+            </div>
+
+        </section>
+
+
+        <!-- ==============================================
+             SAHIFA 11 — USTA PROFILI
+        =============================================== -->
+
+        <section class="page" id="page-worker-detail" data-page-section="worker-detail" hidden>
+
+            <button type="button" class="text-button" data-page="workers">
+                ← Xodimlarga qaytish
+            </button>
+
+            <div id="workerDetailContent"></div>
+
+        </section>
+
+
+        <!-- ==============================================
+             SAHIFA 12 — SARATAROSHXONA TAFSILOTI
+        =============================================== -->
+
+        <section class="page" id="page-shop-detail" data-page-section="shop-detail" hidden>
+
+            <button type="button" class="text-button" data-page="shops">
+                ← Sartaroshxonalarga qaytish
+            </button>
+
+            <div id="shopDetailContent"></div>
+
+            <div class="section-heading">
+                <h2>Ushbu sartaroshxona xodimlari</h2>
+            </div>
+
+            <div class="worker-grid" id="shopDetailWorkers"></div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ==================================================
+         5. PASTKI NAVIGATSIYA
+    ================================================== -->
+
+    <nav class="bottom-navigation" aria-label="Pastki menyu">
+
+        <button type="button" class="bottom-button active" data-page="home">
+            <span class="bottom-icon">⌂</span>
+            <small>Bosh sahifa</small>
+        </button>
+
+        <button type="button" class="bottom-button" data-page="favorites">
+            <span class="bottom-icon">♡</span>
+            <small>Sevimlilar</small>
+        </button>
+
+        <button type="button" class="bottom-button" data-page="bookings">
+            <span class="bottom-icon">♢</span>
+            <small>Bronlarim</small>
+        </button>
+
+        <button type="button" class="bottom-button" data-page="map">
+            <span class="bottom-icon">⌖</span>
+            <small>Joylashuv</small>
+        </button>
+
+    </nav>
+
+</div>
+
+
+<!-- ==================================================
+     6. BRON QILISH OYNASI
+================================================== -->
+
+<div class="modal-overlay" id="bookingModal" hidden>
+    <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="bookingModalTitle">
+
+        <button type="button" class="modal-close" data-close-modal="bookingModal" aria-label="Yopish">
+            ×
+        </button>
+
+        <span class="eyebrow">OLDINDAN BAND QILING</span>
+        <h2 id="bookingModalTitle">Vaqtni band qilish</h2>
+
+        <div id="bookingShopInfo"></div>
+
+        <form id="bookingForm">
+
+            <input type="hidden" id="bookingShopId">
+            <input type="hidden" id="bookingWorkerId">
+
+            <label>
+                Sartarosh
+                <select id="bookingWorker" required>
+                    <option value="">Ustani tanlang</option>
+                </select>
+            </label>
+
+            <label>
+                Xizmat turi
+                <select id="bookingService" required>
+                    <option value="">Xizmatni tanlang</option>
+                    <option value="classic">Klassik soch olish</option>
+                    <option value="fade">Fade</option>
+                    <option value="beard">Soqol olish</option>
+                    <option value="combo">Soch va soqol</option>
+                    <option value="other">Boshqa xizmat</option>
+                </select>
+            </label>
+
+            <label>
+                Sana
+                <input type="date" id="bookingDate" required>
+            </label>
+
+            <label>
+                Vaqt
+                <select id="bookingTime" required>
+                    <option value="">Vaqtni tanlang</option>
+                </select>
+            </label>
+
+            <label>
+                Telefon raqam
+                <input type="tel" id="bookingPhone" placeholder="+998" required>
+            </label>
+
+            <label>
+                Izoh (ixtiyoriy)
+                <textarea id="bookingNote" rows="3"></textarea>
+            </label>
+
+            <div class="booking-price">
+                <span>Taxminiy narx</span>
+                <strong id="bookingPrice">0 so‘m</strong>
+            </div>
+
+            <button type="submit" class="gold-button">
+                Bron so‘rovini yuborish
+            </button>
+
+        </form>
+
+    </section>
+</div>
+
+
+<!-- ==================================================
+     7. MIJOZ FIKRI VA REYTING OYNASI
+================================================== -->
+
+<div class="modal-overlay" id="reviewModal" hidden>
+    <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="reviewModalTitle">
+
+        <button type="button" class="modal-close" data-close-modal="reviewModal" aria-label="Yopish">
+            ×
+        </button>
+
+        <h2 id="reviewModalTitle">Mijozlar fikri</h2>
+        <p>Xizmat haqida o‘z fikringizni qoldiring.</p>
+
+        <form id="reviewForm">
+
+            <input type="hidden" id="reviewShopId">
+            <input type="hidden" id="reviewWorkerId">
+
+            <label>
+                Ismingiz
+                <input type="text" id="reviewName" required>
+            </label>
+
+            <fieldset class="rating-field">
+                <legend>Bahongiz</legend>
+
+                <div class="star-picker" id="starPicker">
+                    <button type="button" data-rating="1" aria-label="1 yulduz">☆</button>
+                    <button type="button" data-rating="2" aria-label="2 yulduz">☆</button>
+                    <button type="button" data-rating="3" aria-label="3 yulduz">☆</button>
+                    <button type="button" data-rating="4" aria-label="4 yulduz">☆</button>
+                    <button type="button" data-rating="5" aria-label="5 yulduz">☆</button>
+                </div>
+            </fieldset>
+
+            <label>
+                Fikringiz
+                <textarea id="reviewText" rows="4" required></textarea>
+            </label>
+
+            <button type="submit" class="gold-button">
+                Fikrni yuborish
+            </button>
+
+        </form>
+
+    </section>
+</div>
+
+
+<!-- ==================================================
+     8. UMUMIY XABAR OYNASI
+================================================== -->
+
+<div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+
+<!-- ==================================================
+     9. JAVASCRIPT
+================================================== -->
+
+<script src="Java.jv/script.js" defer></script>
+
 
 </body>
 </html>
